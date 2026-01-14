@@ -59,7 +59,7 @@ Un sous-compartiment peut etre dupliqué dans différents compartiments.</h2>
                         <li class="def">
                             <h2 class="t-def">Définition</h2>
                             En SoloQ, sur un grand nombre de parties, le seul facteur déterminant est notre gameplay.
-		Le jeu étant du 5V5, il faut déterminer, pour chaque dépendance envers un coéquipier, les attentes que l'on a envers lui pour maximiser notre controle (minimiser le bruit).
+		Le jeu étant du 5V5, il faut déterminer, pour chaque dépendance envers un coéquipier, les attentes que l'on a envers lui pour maximiser notre controle (en minimisant le bruit).
 		C'est une stratégie de guess couplé empiriquement car qualifier une décision d'erreur implique qu'elle soit suboptimale par rapport aux facteurs, mais si on utilise un arbre d'attentes, on assume une dynamicité temporelle 
 		du résultat (couplage empirique) et une imprécision virtuelle (il est virtuellement impossible de déterminer exactement les comportements moyen de chaque coéquipier), donc qu'on ne puisse déterminer une erreur 
 		qu'en assumant que notre jugement est imprécis.
@@ -243,7 +243,16 @@ Un sous-compartiment peut etre dupliqué dans différents compartiments.</h2>
                             <ul>
                                 <li class="def">
                                     <h2 class="t-def">Définition</h2>
-                                    Lorsqu'un jungler utilise sa tempo de manière proactive (c'est à dire qu'il conteste des objectifs ou terrains), on dit qu'il mets de l'activité.
+                                    Lorsqu'un jungler conteste des objectifs ou terrains, il applique une pression.
+                                    Lorsque l'ennemi n'a pas d'information permettant de le tracker, il applique une pression passive.
+                                    Lorsqu'il utilise sa tempo à cet effet, on dit qu'il mets de l'activité.
+                                    Cette activité peut avoir différentes conséquences:
+                                    - Invalidation de l'activité ennemie(empeche l'ennemi de contester des objectifs/terrains).
+                                    - Gain ennemi d'information.
+                                    - Altération des incomes de primes (kills).
+                                    - Altération des incomes GV (xp sharing, wave states).
+                                    - Altération des ressources (summoner spells, health, ...).
+                                    Il est à noté que ces conséquences peuvent aller dans les deux sens (donner de l'information peut offrir du jeu au jungler ennemi, etc).
                                 </li>
                             </ul>
                         </li>
