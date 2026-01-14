@@ -8,6 +8,8 @@
 }
 
 .comp {
+    display: flex;
+    gap: 20px;
 }
 
 .t-def {
