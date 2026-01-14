@@ -1,0 +1,27 @@
+.def {
+}
+
+.train {
+}
+
+.util {
+}
+
+.comp {
+}
+
+.t-def {
+    color: red;
+}
+
+.t-train {
+    color: green;
+}
+
+.t-util {
+    color: blue;
+}
+
+.t-comp {
+    color: purple;
+}
