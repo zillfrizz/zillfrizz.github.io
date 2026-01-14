@@ -22,7 +22,10 @@ Un sous-compartiment peut etre dupliqué dans différents compartiments.</h2>
                         <h2 class="t-comp">Objectifs</h2>
                         <ul>
                         <li class="def">
-                            <h2 class="t-def"></h2>
+                            <h2 class="t-def">Définition</h2>
+                            Sur la carte, des objectifs statiques et dynamiques existent. Ceux-ci sont alliés, ennemis, ou neutres. Les tuer rapporte de l'XP et des GOLDS. 
+		Les mines de la jungle sont constituées d'objectifs neutres là ou les mines des voies sont constituées d'objectifs alliés et d'objectifs ennemis.
+		Les batiments sont des objectifs alliés ou ennemis.
                         </li>
                         </ul>
                     </li>
@@ -31,7 +34,10 @@ Un sous-compartiment peut etre dupliqué dans différents compartiments.</h2>
                         <h2 class="t-comp">Win conditions</h2>
                         <ul>
                         <li class="def">
-                            <h2 class="t-def"></h2>
+                            <h2 class="t-def">Définition</h2>
+                            au lancement de la partie, des conditions spécifiques à chaque game peuvent mener à la victoire. Celles-ci peuvent concerner un ou plusieurs champions, 
+		un timer, des objectifs (objectifs neutres, batiments). Pour déterminer ce qu'il faut faire pour remplir une ou plusieurs de ses conditions, il faut déterminer 
+		l'arbre séquentiel de la partie. Les avant dernières étapes de l'arbre sont nécessairement victoire de combat d'équipe, siege ou backdoor.
                         </li>
                         </ul>
                     </li>
@@ -40,7 +46,9 @@ Un sous-compartiment peut etre dupliqué dans différents compartiments.</h2>
                         <h2 class="t-comp">Bruit</h2>
                         <ul>
                         <li class="def">
-                            <h2 class="t-def"></h2>
+                            <h2 class="t-def">Définition</h2>
+                            En SoloQ, notre controle envers nos coéquipiers passe nécessairement par une ou plusieurs de leurs perceptions, impliquant que notre controle est (très) limité. 
+		Ainsi, il existe une incertitude liée à cette propriété que j'appele "bruit" car celle-ci est relative à nous.
                         </li>
                         </ul>
                     </li>
@@ -49,7 +57,12 @@ Un sous-compartiment peut etre dupliqué dans différents compartiments.</h2>
                         <h2 class="t-comp">Facteur déterminant</h2>
                         <ul>
                         <li class="def">
-                            <h2 class="t-def"></h2>
+                            <h2 class="t-def">Définition</h2>
+                            En SoloQ, sur un grand nombre de parties, le seul facteur déterminant est notre gameplay.
+		Le jeu étant du 5V5, il faut déterminer, pour chaque dépendance envers un coéquipier, les attentes que l'on a envers lui pour maximiser notre controle (minimiser le bruit).
+		C'est une stratégie de guess couplé empiriquement car qualifier une décision d'erreur implique qu'elle soit suboptimale par rapport aux facteurs, mais si on utilise un arbre d'attentes, on assume une dynamicité temporelle 
+		du résultat (couplage empirique) et une imprécision virtuelle (il est virtuellement impossible de déterminer exactement les comportements moyen de chaque coéquipier), donc qu'on ne puisse déterminer une erreur 
+		qu'en assumant que notre jugement est imprécis.
                         </li>
                         </ul>
                     </li>
@@ -58,7 +71,9 @@ Un sous-compartiment peut etre dupliqué dans différents compartiments.</h2>
                         <h2 class="t-comp">Faits de jeu</h2>
                         <ul>
                         <li class="def">
-                            <h2 class="t-def"></h2>
+                            <h2 class="t-def">Définition</h2>
+                            LoL étant un jeu comportant des interactions avec des degrés de précision et une incertitude de synchronisation entre coéquipiers, ceci implique l'existence de faits de jeu, qui provoquent des résultats variables
+		pour les memes décisions centrées sur les memes facteurs. C'est en cela qu'est la différence avec le bruit qui ne concerne que les erreurs des coéquipiers.
                         </li>
                         </ul>
                     </li>
@@ -67,7 +82,15 @@ Un sous-compartiment peut etre dupliqué dans différents compartiments.</h2>
                         <h2 class="t-comp">Throw</h2>
                         <ul>
                         <li class="def">
-                            <h2 class="t-def"></h2>
+                            <h2 class="t-def">Définition</h2>
+                            Le throw provient de trois facteurs potentiels :
+			- Les faits de jeu: c'est un risque inhérent à toute partie impliquant de potentielles interactions mécaniques et/ou impliquant une synchronisation entre coéquipiers (virtuellement, toutes les parties).
+			Cela permet d'alimenter l'arbre d'attentes.
+			Il doit etre distingué des erreurs de micro qui implique par ailleurs une part de communication (si vous ne communiquez pas, l'erreur comporte peut etre un/des faits de jeu, mais également une erreur). 
+			- Le bruit: C'est un risque inhérent à toute partie contenant du bruit (virtuellement, toutes les parties).
+			Il doit etre distingué des erreurs de micro qui implique par ailleurs une part de communication (si vous ne communiquez pas, l'erreur comporte peut etre un/des faits de jeu, mais également une erreur).
+			Contrairement aux faits de jeu, celui-ci n'a aucun interet d'amélioration.
+			- Les erreurs
                         </li>
                         </ul>
                     </li>
@@ -76,7 +99,11 @@ Un sous-compartiment peut etre dupliqué dans différents compartiments.</h2>
                         <h2 class="t-comp">Macro</h2>
                         <ul>
                         <li class="def">
-                            <h2 class="t-def"></h2>
+                            <h2 class="t-def">Définition</h2>
+                            L'impératif est donné au suivi de l'arbre séquentiel de victoire.
+		La macro a pour but de valider les étapes de cet arbre.
+		Il est à noter que si un arbre séquentiel de victoire existe, un arbre séquentiel de perte existe également.
+		Il est donc important de prendre en compte celui-ci pour anticiper les throws possibles.
                         </li>
                         </ul>
                     </li>
@@ -85,7 +112,14 @@ Un sous-compartiment peut etre dupliqué dans différents compartiments.</h2>
                         <h2 class="t-comp">Tempo</h2>
                         <ul>
                         <li class="def">
-                            <h2 class="t-def"></h2>
+                            <h2 class="t-def">Définition</h2>
+                            La tempo est la série séquentielle des ressources, càd le suivi des ressources.
+		Ce suivi a pour but d'anticiper les besoins et établir la série temporelle des ressources.
+		Ce suivi contient une notion de disponibilité; ex: les summoners spells ont un temps de récupération.
+		Ce suivi peut contenir des seuils; ex: pour les mines d'XP et de golds, le fait de greed sa tempo est le fait de dépasser le seuil duquel on réduit l'income des mines.
+		Ce suivi concerne un ensemble potentiellement variable de ressources; ex: lorsque l'on swap lane, on transfert leurs responsabilités et mines.
+		La Tempo est en fait le complément dynamique à la Macro, ce qui indique qu'elle assume etre en phase avec la Macro.
+		Il est à noter que ce suivi doit également concerner les ressources ennemies, pour prendre les bonnes décisions et anticiper les throws possibles.
                         </li>
                         </ul>
                     </li>
@@ -94,7 +128,11 @@ Un sous-compartiment peut etre dupliqué dans différents compartiments.</h2>
                         <h2 class="t-comp">Micro</h2>
                         <ul>
                         <li class="def">
-                            <h2 class="t-def"></h2>
+                            <h2 class="t-def">Définition</h2>
+                            La micro concerne le niveau de maitrise et la prise de décision liée aux interactions avec les mécaniques de jeu ET l'adaptation en temps réel vis-à-vis des autres champions.
+		La Macro est la logique, la Micro est l'execution et le rapidité/qualité de prise de décisions dynamiques.
+		Il est à noter que la Micro contient un facteur de conditionnement qui est le fait d'anticiper et se préparer aux interactions pour une meilleure qualité/constance mécanique 
+		et qui a un impact non-négligeable sur le résultat.
                         </li>
                         </ul>
                     </li>
@@ -103,7 +141,10 @@ Un sous-compartiment peut etre dupliqué dans différents compartiments.</h2>
                         <h2 class="t-comp">Communication</h2>
                         <ul>
                         <li class="def">
-                            <h2 class="t-def"></h2>
+                            <h2 class="t-def">Définition</h2>
+                            la communication est une promesse de controle vis-à-vis des coéquipiers, càd qu'il est possible que ca ait un impact sur leur comportement (à priori, à court terme).
+		Ce controle n'est qu'une promesse, càd que l'impact se ressent sur un grand nombre de parties, mais pas nécessairement sur une partie ou une situation isolée.
+		La communication agnostique vis-à-vis de l'envoyeur ayant le plus d'impact est généralement celle relative au jungle tracking, qui est le fait d'anticiper et traquer les déplacements et le champ d'action du jungler adverse.
                         </li>
                         </ul>
                     </li>
@@ -112,7 +153,8 @@ Un sous-compartiment peut etre dupliqué dans différents compartiments.</h2>
                         <h2 class="t-comp">Prise d'information</h2>
                         <ul>
                         <li class="def">
-                            <h2 class="t-def"></h2>
+                            <h2 class="t-def">F-Keys</h2>
+                            les f-keys permettent de centrer la caméra sur un champion allié à partir d'une touche maintenue. Cela demande de la maitrise, mais permet une prise d'information rapide.
                         </li>
                         </ul>
                     </li>
@@ -121,7 +163,12 @@ Un sous-compartiment peut etre dupliqué dans différents compartiments.</h2>
                         <h2 class="t-comp">Vision</h2>
                         <ul>
                         <li class="def">
-                            <h2 class="t-def"></h2>
+                            <h2 class="t-def">Définition</h2>
+                            la vision est le fait d'avoir des informations sur la présence ou non de champions, d'objectifs, de balises ou de vision ennemie dans une zone donnée.
+		Celle-ci peut permettre de s'assurer qu'une zone soit dans le FOG vis-à-vis de l'équipe ennemie.
+		Celle-ci peut permettre d'avoir la vision sur une zone.
+		Celle-ci peut permettre de restreindre la vision de l'équipe ennemie.
+
                         </li>
                         </ul>
                     </li>
@@ -130,7 +177,10 @@ Un sous-compartiment peut etre dupliqué dans différents compartiments.</h2>
                         <h2 class="t-comp">Analyse (par entonnoir)</h2>
                         <ul>
                         <li class="def">
-                            <h2 class="t-def"></h2>
+                            <h2 class="t-def">Définition</h2>
+                            L'analyse d'une partie peut etre effectuée par entonnoir, càd qu'à partir d'une problématique, on determine ces causes, 
+	les causes de ces causes et ainsi de suite jusqu'à identifier les causes primaires. Les identifier est l'étape la plus exigeante.
+	A partir de ces causes, on peut définir des axes d'amélioration et/ou des règles logiques destinées à avoir un plan de jeu resistant à la vitesse et au contexte de prise de décision.
                         </li>
                         </ul>
                     </li>
@@ -139,7 +189,10 @@ Un sous-compartiment peut etre dupliqué dans différents compartiments.</h2>
                         <h2 class="t-comp">Reset mental</h2>
                         <ul>
                         <li class="def">
-                            <h2 class="t-def"></h2>
+                            <h2 class="t-def">Présentation</h2>
+                            De part l'aspect séquentiel d'une partie, le joueur subit mentalement les erreurs et faits de jeu passés. 
+	En y ajoutant le fait que sa perception soit nécessairement incomplète et centrée sur lui, 
+	il lui est utile d'adopter des stratégies pour ne pas laisser cela impacter négativement son mental et garder la perception la plus globale et rationnelle possible.
                         </li>
                         </ul>
                     </li>
@@ -153,7 +206,9 @@ Un sous-compartiment peut etre dupliqué dans différents compartiments.</h2>
                             <h2 class="t-comp">XP</h2>
                             <ul>
                                 <li class="def">
-                                    <h2 class="t-def"></h2>
+                                    <h2 class="t-def">Présentation</h2>
+                                    Jusqu'au niveau 6, les montées en niveau viennent au camp 1, 3, 6, 9 et 12. 
+		Ainsi, il est important de suivre et anticiper les passages de niveau en terme de Macro et de Tempo (ex: pathing, tempo greeding, ...).
                                 </li>
                             </ul>
                         </li>
@@ -162,7 +217,9 @@ Un sous-compartiment peut etre dupliqué dans différents compartiments.</h2>
                             <h2 class="t-comp">XP des camps</h2>
                             <ul>
                                 <li class="def">
-                                    <h2 class="t-def"></h2>
+                                    <h2 class="t-def">Présentation</h2>
+                                    Les camps montent en niveau à mesure qu'ils réapparaissent (déterminé par le niveau moyen des joueurs au respawn du camp).
+		Ainsi, il est souvent préférable de spécialiser les mines que l'on exploite en anticipant le jeu possible du jungler adverse (vol de camps, warding, counter gank, ...) et les couts d'exploitation.
                                 </li>
                             </ul>
                         </li>
@@ -171,7 +228,12 @@ Un sous-compartiment peut etre dupliqué dans différents compartiments.</h2>
                             <h2 class="t-comp">Pathing</h2>
                             <ul>
                                 <li class="def">
-                                    <h2 class="t-def"></h2>
+                                    <h2 class="t-def">Définition</h2>
+                                    En assumant qu'il exploite actuellement des mines, le jungler doit adopter un pathing (commencer à une mine, choisir séquentiellement vers quelle mine se diriger).
+		Son pathing détermine sa série d'income et de tempo (je parle de série de tempo car il faut prendre en compte la quantité, mais également les timings ou il a du temps disponible).
+		Il est à noter que toute mine implique une série de risque d'exploitation (par exemple, si on fait un camp, il est possible qu'à la réapparition, on ne puisse pas accéder à la mine ou qu'elle soit envahie),
+		d'autant plus pour les camps de jungle qui sont des objectifs neutres, donc qui peuvent etre récupérés par l'ennemi.
+	
                                 </li>
                             </ul>
                         </li>
@@ -180,7 +242,8 @@ Un sous-compartiment peut etre dupliqué dans différents compartiments.</h2>
                             <h2 class="t-comp">Activité</h2>
                             <ul>
                                 <li class="def">
-                                    <h2 class="t-def"></h2>
+                                    <h2 class="t-def">Définition</h2>
+                                    Lorsqu'un jungler utilise sa tempo de manière proactive (c'est à dire qu'il conteste des objectifs ou terrains), on dit qu'il mets de l'activité.
                                 </li>
                             </ul>
                         </li>
